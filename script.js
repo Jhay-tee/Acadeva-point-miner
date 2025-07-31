@@ -1,6 +1,6 @@
 let points = 0;
 let errorMessage = 'Please enter a number between 1 and 3'
-let numberToGuess = Math.floor(Math.random() * 3) + 1;
+let numberToGuess = Math.floor(Math.random() * 10) + 1;
 const guessInput = document.getElementById('guess-input');
 const guessBtn = document.getElementById('guess-btn');
 const resultMessage = document.getElementById('result-message');
@@ -23,8 +23,8 @@ guessBtn.addEventListener('click', checkGuess);
 
 function checkGuess() {
     const guess = parseInt(guessInput.value);
-    if (isNaN(guess) || guess < 1 || guess > 3) {
-        resultMessage.textContent = 'Please enter a number between 1 and 3';
+    if (isNaN(guess) || guess < 1 || guess > 10) {
+        resultMessage.textContent = 'Please enter a number between 1 and 10';
         resultMessage.style.color = "red";
         //guessInput.value = " ";
         setTimeout(() => {
@@ -39,14 +39,14 @@ function checkGuess() {
         pointsBox.textContent = `Current Points: ${points}`;
         popupMessage.textContent = `Congratulations! You guessed the number correctly and earned 50 points!`;
         popup.style.display = 'block';
-        numberToGuess = Math.floor(Math.random() * 3) + 1;
+        numberToGuess = Math.floor(Math.random() * 10) + 1;
         
     } else {
         resultMessage.textContent = `Incorrect guess the number was ${numberToGuess}`;
         setTimeout(() => {
             resultMessage.textContent = '';
         }, 2000);
-        numberToGuess = Math.floor(Math.random() * 3) + 1;
+        numberToGuess = Math.floor(Math.random() * 10) + 1;
 
     }
     guessInput.value = '';
