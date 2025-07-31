@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="welcome" class="welcome">
+        <div class="welcome-content">
+            <p id="welcomeMessage">
+            </p>
+            <button id="ok">OK</button>
+        </div>
+    </div>
+    <div class="container">
+        <img src="acadevaicon.jpeg">    
+        <h1> Acadeva Guess Game</h1>  
+        <h4>(get 50 points for each correct guess)</h4><br>                                       
+        <input type="number" id="guess-input" placeholder="Guess a number between 1-30"><br>
+        <button id="guess-btn">Guess</button>
+        <p id="result-message"></p>
+        <div id="points-box">Current Points: <span id="points">0</span></div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p id="popup-message"></p>
+                <button id="popup-close">claim</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
