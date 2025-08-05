@@ -36,13 +36,14 @@ function checkGuess() {
 
     if (guess === numberToGuess) {
         points += 50;
-        pointsBox.textContent = `Current Points: ${points}`;
+        pointsBox.textContent = `${points}`;
         popupMessage.textContent = `Congratulations! You guessed the number correctly and earned 50 points!`;
         popup.style.display = 'block';
         numberToGuess = Math.floor(Math.random() * 10) + 1;
         
     } else {
         resultMessage.textContent = `Incorrect guess the number was ${numberToGuess}`;
+        resultMessage.style.color = "white"
         setTimeout(() => {
             resultMessage.textContent = '';
         }, 2000);
