@@ -30,7 +30,7 @@ function checkGuess() {
         setTimeout(() => {
             resultMessage.textContent = '';
             guessInput.value = " ";
-        }, 2000);
+        }, 1000);
         return;
     }
 
@@ -46,7 +46,7 @@ function checkGuess() {
         resultMessage.style.color = "white"
         setTimeout(() => {
             resultMessage.textContent = '';
-        }, 2000);
+        }, 1000);
         numberToGuess = Math.floor(Math.random() * 10) + 1;
 
     }
