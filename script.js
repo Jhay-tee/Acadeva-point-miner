@@ -12,7 +12,7 @@ const welcome = document.getElementById("welcome");
 const welcomeMessage = document.getElementById("welcomeMessage");
 const ok = document.getElementById("ok")
 
-welcomeMessage.textContent = "Welcome to Acadeva Guess game get 50 points for any Correct guess enjoy!!";
+welcomeMessage.textContent = "Welcome to Acadeva Guess game get 5 points for any Correct guess enjoy!!";
         welcome.style.display = 'block';
 ok.addEventListener('click', close);
 
@@ -35,9 +35,9 @@ function checkGuess() {
     }
 
     if (guess === numberToGuess) {
-        points += 50;
+        points += 5;
         pointsBox.textContent = `${points}`;
-        popupMessage.textContent = `Congratulations! You guessed the number correctly and earned 50 points!`;
+        popupMessage.textContent = `Congratulations! You guessed the number correctly and earned 5 points!`;
         popup.style.display = 'block';
         numberToGuess = Math.floor(Math.random() * 10) + 1;
         
